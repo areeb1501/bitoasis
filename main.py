@@ -15,7 +15,7 @@ def calculate_transaction(amount_aed, price, maker_fee=0.004, taker_fee=0.006, i
     return crypto_amount, fee_amount
 
 if 'investment_aed' not in st.session_state:
-    st.session_state.investment_aed = 0
+    st.session_state.investment_aed = 1000
 
 st.title("BitOasis Transaction Calculator")
 pair_option = st.selectbox("Select Crypto Pair:", ["ETH-AED", "BTC-AED"])
