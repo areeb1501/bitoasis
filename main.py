@@ -39,14 +39,14 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("### Buy (Green)")
-    st.markdown(f"<span style='color:green; font-size:20px; font-weight:bold;'>Current Price: {price} AED</span>", unsafe_allow_html=True)
+    st.markdown(f"<span style='color:green; font-size:20px; font-weight:bold;'>Current Price: {price*3.67} AED</span>", unsafe_allow_html=True)
     crypto_buy, fee_buy = calculate_transaction(st.session_state.investment_aed, price, is_buy=True)
     st.write(f"Amount of Crypto: {crypto_buy}")
     st.write(f"Fee (Included): {fee_buy} AED")
 
 with col2:
     st.markdown("### Sell (Red)")
-    st.markdown(f"<span style='color:red; font-size:20px; font-weight:bold;'>Current Price: {price} AED</span>", unsafe_allow_html=True)
+    st.markdown(f"<span style='color:red; font-size:20px; font-weight:bold;'>Current Price: {price*3.67} AED</span>", unsafe_allow_html=True)
     crypto_sell, fee_sell = calculate_transaction(st.session_state.investment_aed, price, is_buy=False)
     st.write(f"Amount of Crypto: {crypto_sell}")
     st.write(f"Fee (Included): {fee_sell} AED")
